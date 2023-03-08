@@ -19,8 +19,11 @@ The goal of this app is to handle all your PowerShell related needs in Splunk.
 
 ## How to use
 Until this repo is stable, it won't be put on SplunkBase. 
+
 Clone the repo 
+
 ``` git clone https://github.com/hampusstrom/TA-PowerShell.git ```
+
 Customize the inputs.conf to your needs and push using your depoyer and/or deploymentserver depending on your needs.
 
 
