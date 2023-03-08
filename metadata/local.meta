@@ -62,3 +62,27 @@ modtime = 1677341211.650542000
 owner = hampus
 version = 9.0.4
 modtime = 1677363047.105108000
+
+[props/xmlwineventlog/EXTRACT-EncodedCommand]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = hampus
+version = 9.0.4
+modtime = 1678265280.685732000
+
+[transforms/decodecommand]
+version = 9.0.4
+modtime = 1678273351.200314000
+
+[transforms/decodeCommand]
+access = read : [ * ], write : [ admin, power ]
+export = system
+owner = nobody
+version = 9.0.4
+modtime = 1678275322.343639000
+
+[]
+access = read : [ * ], write : [ admin, power ]
+export = system
+version = 9.0.4
+modtime = 1678279134.215683000
