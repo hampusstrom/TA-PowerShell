@@ -1,2 +1,5 @@
 local/*.conf
 *.conf.save√
+default/*.conf.save
+local/*.conf.save
+metadata/local.meta
