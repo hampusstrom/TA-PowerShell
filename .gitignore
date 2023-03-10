@@ -3,3 +3,4 @@ local/*.conf
 default/*.conf.save
 local/*.conf.save
 metadata/local.meta
+lookups/lookup_file_backups
