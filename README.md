@@ -18,7 +18,7 @@ Splunk TA for PowerShell is an app for Splunk Enterprise that tries to be your o
 * Reports & Dashboards
 
 ## Depencencies
-(https://splunkbase.splunk.com/app/742)[Splunk Add-on for Microsoft Windows]
+https://splunkbase.splunk.com/app/742
 
 ## How to use
 Until this repo is stable, it won't be put on SplunkBase. 
