@@ -6,8 +6,7 @@ Splunk TA for PowerShell is an app for Splunk Enterprise that tries to be your o
 
 ## Features
 * Inputs for Windows PowerShell Scriptblock event logs
-* Field extractions for scriptblock (EventCode 4104) event logs 
-* Automatic lookup for decoding -EncodedCommands
+* Automatic lookup for decoding -EncodedCommands in sysmon events.
 * Inputs.conf local blacklisting of some common useless scriptblocks
 * Tag and EventType for encoded commands (psencodedcommand) for easier filtering
 * Automatically calculated SHA256 hash per unique scriptblock for easy whitelisting and IoC sharing.
@@ -16,9 +15,10 @@ Splunk TA for PowerShell is an app for Splunk Enterprise that tries to be your o
 * Transcript logging
 * Module logging if anyone actually cares about it
 * PowerShell Core logging on Windows/*nix/MacOS
-* Automatically calculated threat scores for scriptblocks from keywords. 
-* Enterprise Security analytic stories
 * Reports & Dashboards
+
+## Depencencies
+(https://splunkbase.splunk.com/app/742)[Splunk Add-on for Microsoft Windows]
 
 ## How to use
 Until this repo is stable, it won't be put on SplunkBase. 
