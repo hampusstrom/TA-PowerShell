@@ -5,28 +5,38 @@ import csv
 import hashlib
 
 def hash(ScriptBlockText):
-  try:
-    hash = hashlib.sha256(ScriptBlockText.encode())
-    return hash.hexdigest()
-  except:
-   return ''
+    if isinstance(ScriptBlockText, str):
+        try:
+            ScriptBlockText = ScriptBlockText.encode("utf-16-le")
+        except:
+            try: 
+                ScriptBlockText = ScriptBlockText.encode("utf8")
+            except:
+                raise Exception("Unable to encode unicode object.")
+        
+    try:
+        hash = hashlib.sha256(ScriptBlockText)
+        return hash.hexdigest()
+    except Exception as e:
+        print(e)
+        return ''
 
 def main():
-  if len(sys.argv) < 2:
-    print ("Usage: python3 scripthash.py <ScriptBlockText>")
-    sys.exit(-1)
+    if len(sys.argv) < 2:
+        print("Usage: python3 scripthash.py <ScriptBlockText>")
+        sys.exit(-1)
 
-  ScriptBlockText = sys.argv[1]
-  infile = sys.stdin
-  outfile = sys.stdout
+    ScriptBlockText = sys.argv[1]
+    infile = sys.stdin
+    outfile = sys.stdout
 
-  r = csv.DictReader(infile)
-  header = r.fieldnames
-  w = csv.DictWriter(outfile, fieldnames=r.fieldnames)
-  w.writeheader()
+    rows = csv.DictReader(x.replace('\0','') for x in infile)
+    headers = rows.fieldnames
+    writer = csv.DictWriter(outfile, fieldnames=headers)
+    writer.writeheader()
 
-  for result in r:
-   if result[ScriptBlockText] and not result['ScriptBlockHash']:
-      result['ScriptBlockHash'] = hash(result[ScriptBlockText])
-   w.writerow(result)
+    for row in rows:
+        if row[ScriptBlockText] and not row['ScriptBlockHash']:
+            row['ScriptBlockHash'] = hash(row[ScriptBlockText])
+        writer.writerow(row)
 main()
