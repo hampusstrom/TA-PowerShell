@@ -10,6 +10,7 @@ Splunk TA for PowerShell is an app for Splunk Enterprise that tries to be your o
 * Inputs.conf local blacklisting of some common useless scriptblocks
 * Tag and EventType for encoded commands (psencodedcommand) for easier filtering
 * Automatically calculated SHA256 hash per unique scriptblock for easy whitelisting and IoC sharing.
+* WinRM Log inputs and field extraction
 
 ## Planned
 * Transcript logging
