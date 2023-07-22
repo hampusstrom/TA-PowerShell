@@ -1,6 +1,7 @@
 local/*.conf
-*.conf.saveÃ
+*.conf.saveï¿½
 default/*.conf.save
 local/*.conf.save
 metadata/local.meta
 lookups/lookup_file_backups
+local/*/*
